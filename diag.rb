@@ -71,4 +71,13 @@ END
 END
     assert_equal(expected, diag(4))
   end
+
+  def test_third
+    expected =<<END
+*-*
+-*-
+*-*
+END
+    assert_equal(expected, diag(3))
+  end
 end
