@@ -30,8 +30,7 @@ require 'test/unit'
 def doline(n, pos)
    line = []
    n.times do |index|
-     if pos == index ||
-        (index + pos) == 4
+     if pos == index || (index + pos) == 4
        char = '*'
      else
        char = '-'
