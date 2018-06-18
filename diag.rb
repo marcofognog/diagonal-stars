@@ -62,4 +62,13 @@ END
     assert_equal(expected, diag(5))
   end
 
+  def test_second
+    expected =<<END
+*--*
+-**-
+-**-
+*--*
+END
+    assert_equal(expected, diag(4))
+  end
 end
