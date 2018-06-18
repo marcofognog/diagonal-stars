@@ -27,10 +27,19 @@
 
 require 'test/unit'
 
+def doline(n, pos)
+   line = []
+   n.times do
+     char = '-'
+     line << char
+   end
+   line.join
+end
+
 def diag(n)
   str = []
   n.times do
-    str << '-----'
+    str << doline(n, 0)
   end
   str.join("\n") + "\n"
 end
