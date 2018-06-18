@@ -31,14 +31,13 @@ def doline(n, pos)
    line = []
    n.times do |index|
      if pos == 0 && index == 0 ||
-        pos == 0 && index == 0 ||
-        pos == 0 && index == 4 ||
         pos == 1 && index == 1 ||
-        pos == 1 && index == 3 ||
         pos == 2 && index == 2 ||
         pos == 3 && index == 3 ||
-        pos == 3 && index == 1 ||
         pos == 4 && index == 4 ||
+        pos == 0 && index == 4 ||
+        pos == 1 && index == 3 ||
+        pos == 3 && index == 1 ||
         pos == 4 && index == 0
        char = '*'
      else
