@@ -24,6 +24,7 @@
 # n = 3
 # *-*
 # -*-
+# *-*
 
 require 'test/unit'
 
