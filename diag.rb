@@ -29,21 +29,15 @@
 require 'test/unit'
 
 def doline(n, pos)
-   n.times.reduce([]) do |acc, index|
-     if pos == index || (index + pos) == (n - 1)
-       char = '*'
-     else
-       char = '-'
-     end
-
-     acc << char
-   end.join
+   n.times.reduce('') do |acc, index|
+     acc += (pos == index || (index + pos) == (n - 1) ? '*' : '-')
+   end
 end
 
 def diag(n)
-  n.times.reduce([]) do |acc, index|
-    acc << doline(n, index)
-  end.join("\n") + "\n"
+  n.times.reduce('') do |acc, index|
+    acc += (doline(n, index) + "\n")
+  end
 end
 
 class DiagonalStar < Test::Unit::TestCase
